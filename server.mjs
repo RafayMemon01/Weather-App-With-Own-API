@@ -1,28 +1,24 @@
-console.log("Server Was Working");
 import express from 'express';
 import cors from 'cors';
-import path from 'path';
-const __dirname = path.resolve();
-const app = express();
+const app = express()
 app.use(cors())
-const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello World!' + new Date())
-});
+    res.send('Hello World!')
+})
 app.get('/weather', (req, res) => {
-  res.send(
-    {
-        city: 'karachi',
+    res.send({
+        city: 'Karachi',
         temp: 30,
-        minTemp: 25,
-        humidity: 100,
+        minTemp:25,
+        maxTemp: 45,
+        humidity: 56,
         pressure: 100,
-        maxTemp: 40
-    }
-  )
-});
-app.use(express.static(path.join(__dirname,'public')))
+        feelsLike:35
+    });
+})
+
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Example Server listening on port ${PORT}`)
+  console.log(`Example app listening on port ${PORT}`)
 })
