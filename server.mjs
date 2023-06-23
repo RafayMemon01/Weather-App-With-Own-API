@@ -1,6 +1,8 @@
 console.log("Server Was Working");
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+
 const app = express();
 app.use(cors())
 const PORT = process.env.PORT || 3000;
@@ -20,7 +22,7 @@ app.get('/weather', (req, res) => {
     }
   )
 });
-
+app.use(express.static(path.join(__dirname,'public')))
 app.listen(PORT, () => {
   console.log(`Example Server listening on port ${PORT}`)
 })

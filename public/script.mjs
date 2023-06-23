@@ -8,7 +8,7 @@ window.getWheather = function () {
     // let API_Key = 'cf50cf7a63427b9fa8bdbc1c639b7461';
   
     // Make a request for a user with a given ID
-    axios.get(`https://emerald-ant-hat.cyclic.app/weather`)
+    axios.get(`http://localhost:3000/weather`)
       .then(function (response) {
         
         // handle success
