@@ -13,20 +13,20 @@ window.getWheather = function () {
         
         // handle success
         console.log(response.data);
-        let heading = document.querySelector(".modalHeading").innerHTML = `Climate Of ${response.data.name}`;
-        let temp = document.querySelector("#temp").innerHTML = `${response.data.main.temp}`;
+        let heading = document.querySelector(".modalHeading").innerHTML = `Climate Of ${response.data.city}`;
+        let temp = document.querySelector("#temp").innerHTML = `${response.data.temp}`;
   
         // let feelsLike = document.querySelector(".feelsLike").innerHTML = `${response.data.main.feels_like}`;
-        let minTemp = document.querySelector("#minTemp").innerHTML = `${response.data.main.temp_min}`;
-        let maxTemp = document.querySelector("#maxTemp").innerHTML = `${response.data.main.temp_max}`;
-        let humidity = document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}`;
-        let pressure = document.querySelector("#pressure").innerHTML = `${response.data.main.pressure}`;
+        let minTemp = document.querySelector("#minTemp").innerHTML = `${response.data.minTemp}`;
+        let maxTemp = document.querySelector("#maxTemp").innerHTML = `${response.data.maxTemp}`;
+        let humidity = document.querySelector("#humidity").innerHTML = `${response.data.humidity}`;
+        let pressure = document.querySelector("#pressure").innerHTML = `${response.data.pressure}`;
       })
       .catch(function (error) {
         // handle error
         console.log(error);
         let errorResult = document.querySelector("#result").innerHTML=`${cityName} is not a city Name `
-        r1 = document.querySelector('.no-display').classList.toggle('no-display');
+        r1 = document.querySelector('.no-display').classList.toggle('no-display');  
       });
   
   
@@ -43,3 +43,4 @@ window.getWheather = function () {
   
   
   }
+window
