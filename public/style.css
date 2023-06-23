@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 
 body {
-
-
-    /* background-image: url('./images/lukasz-lada-LtWFFVi1RXQ-unsplash.jpg'); */
+    background-image: url('https://images.pexels.com/photos/325117/pexels-photo-325117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-position: ; */
 }
 
 .main {

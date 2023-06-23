@@ -18,7 +18,7 @@ window.getWeather = function () {
       })
       .catch(function (error) {
         console.log(error);
-        let errorResult = document.querySelector("#result").innerHTML = `${cityName} is not a city name`;
+        let errorResult = document.querySelector("#result").innerHTML = `${cityName} weather data was not available. Try to Search Karachi or London`;
         r1 = document.querySelector('.no-display').classList.toggle('no-display');
       });
   }
