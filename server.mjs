@@ -2,7 +2,7 @@ console.log("Server Was Working");
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-
+const __dirname = path.resolve();
 const app = express();
 app.use(cors())
 const PORT = process.env.PORT || 3000;
