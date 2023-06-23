@@ -2,15 +2,17 @@ window.getWeather = function () {
     let r1 = "";
     let cityName = document.querySelector("#cityName").value;
     console.log(cityName);
-    r1 = document.querySelector(".no-display");
+    // r1 = document.querySelector(".no-display");
   
-    axios.get(`http://localhost:3000/weather`)
-      .then(function (response) {
+    axios.get(`/weather/${cityName}`)
+    .then(response => {
+        const data = response.data;
         console.log(response.data);
         let heading = document.querySelector(".modalHeading").innerHTML = `Climate Of ${response.data.city}`;
-        let temp = document.querySelector("#temp").innerHTML = `${response.data.temperature}`;
-        let minTemp = document.querySelector("#minTemp").innerHTML = `${response.data.min}`;
-        let maxTemp = document.querySelector("#maxTemp").innerHTML = `${response.data.max}`;
+        let temp = document.querySelector("#temp").innerHTML = `${response.data.temp}`;
+        let feelsLike = document.querySelector(".feelsLike").innerHTML = `${response.data.feelsLike}`
+        let minTemp = document.querySelector("#minTemp").innerHTML = `${response.data.minTemp}`;
+        let maxTemp = document.querySelector("#maxTemp").innerHTML = `${response.data.maxTemp}`;
         let humidity = document.querySelector("#humidity").innerHTML = `${response.data.humidity}`;
         let pressure = document.querySelector("#pressure").innerHTML = `${response.data.pressure}`;
       })
