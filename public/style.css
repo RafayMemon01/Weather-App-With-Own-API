@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+body {
+
+
+    background-image: url('./images/pexels-adam-kontor-325117.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    background-color: rgba(240, 248, 255, 0.253);
+    /* position: sticky; */
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-display {
+    display: none;
+    /* display: flex; */
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    flex-direction: column;
+}
+
+.heading h1 {
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+.background-color {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+input.transparent-input {
+    background-color: rgba(0, 0, 0, 0) !important;
+    /* border:none !important; */
+}
+
+label.transparent-input {
+    background-color: rgba(0, 0, 0, 0) !important;
+    /* border:none !important; */
+}
+
+.btn {
+    border: 1px solid white !important;
+}
+
+
+form {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:620px) {
+    .main {
+        align-self: center;
+        justify-self: center;
+        margin-top: 30%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}

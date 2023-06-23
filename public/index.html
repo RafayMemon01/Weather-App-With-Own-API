@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Weather API</title> 
+    <link rel="shortcut icon" href="./images/sun-logo-vector-templates-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="main rounded">
+        <div class="heading">
+            <h1>
+                <b>
+                    
+                    Dummy Climate
+                </b>
+            </h1>
+            <errortag class="no-display">
+
+                <p id="result" style="color: red ;" ></p><a href="https://rafaymemon01.github.io/Climate-Cast/">Refresh now</a>
+            </errortag>
+        </div>
+        <form>
+
+            <div class="form mb-3">
+                <input type="text" class="form-control transparent-input " id="cityName"
+                    placeholder="Enter Your City Name">
+                <!-- <label for="floatingInput transparent-input">Enter City</label> -->
+            </div>
+            <!-- <label for="userCity">Your City</label><br>
+            <input type="text" id="userCity" placeholder="Enter Your City Name"> -->
+            <br>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Wheather"
+                onclick="getWheather()">Check
+                Weather</button>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="Wheather" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 modalHeading" id="exampleModalLabel "></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-md-6">
+                                <p><strong>Temperature:</strong> <span id="temp"></span> &#8451;</p>
+                                <!-- <p><strong>Feels Like:</strong> <span class="feelsLike"></span> &#8451;</p> -->
+                                <p><strong>Minimum Temperature:</strong> <span id="minTemp"></span> &#8451;</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+                                <p><strong>Pressure:</strong> <span id="pressure"></span> hPa</p>
+                                <p><strong>Maximum Temperature:</strong> <span id="maxTemp"></span> &#8451;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+            </div>
+    </div>
+    </form>
+
+
+
+
+    <script src="script.mjs" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
